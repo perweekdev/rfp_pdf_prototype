@@ -242,6 +242,12 @@ def ui_clear_chat(cache: Dict[str, Any]):
 def main():
     pdf_choices = list_pdfs()
 
+    # 1) 앱 시작 시 임베딩 모델 선로드
+    embed_model = SentenceTransformer(EMBED_MODEL_NAME)
+
+    # 2) 웜업: 첫 encode가 느린 문제 완화
+    _ = embed_model.encode(["warmup"], convert_to_numpy=True, show_progress_bar=False)
+
     with gr.Blocks(css=CSS) as demo:
         gr.Markdown("# RFP PDF 프로토타입 v0")
 

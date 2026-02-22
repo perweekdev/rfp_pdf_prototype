@@ -90,3 +90,6 @@ python app.py
 - 요약/답변이 “재시도 안내”만 나옴
     - 일시적인 생성 실패(GEN_FAIL)일 수 있으니 다시 시도
     - 네트워크/키/모델 접근 권한을 확인
+
+![Summary](readme/image1.png)
+![Q&A](readme/image2.png)
