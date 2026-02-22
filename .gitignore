@@ -1,0 +1,15 @@
+# data lists (do not track)
+data/pdfs/*.pdf
+*Zone.Identifier
+
+__pycache__
+.vscode
+
+uv.lock
+uv copy.lock
+pyproject copy.toml
+.venv
+
+.env
+
+rfp_pdf_prototype.egg-info
